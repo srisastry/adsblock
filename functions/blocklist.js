@@ -19,9 +19,8 @@ export async function onRequest() {
     }
   });
 
-  const output = Array.from(domains).join("\n");
-
-  return new Response(output, {
-    headers: { "content-type": "text/plain" }
-  });
+  return new Response(
+    Array.from(domains).join("\n"),
+    { headers: { "content-type": "text/plain" } }
+  );
 }
